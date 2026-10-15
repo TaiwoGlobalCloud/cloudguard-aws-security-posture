@@ -1,0 +1,17 @@
+
+{
+  "bucket_name": "demo-insecure-bucket",
+  "public_access_block": {
+    "block_public_acls": false,
+    "ignore_public_acls": false,
+    "block_public_policy": false,
+    "restrict_public_buckets": false
+  },
+  "encryption": {
+    "enabled": false
+  },
+  "versioning": {
+    "enabled": false
+  },
+  "https_only": false
+}
