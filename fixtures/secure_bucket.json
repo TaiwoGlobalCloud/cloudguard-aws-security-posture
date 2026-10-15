@@ -14,5 +14,24 @@
   "versioning": {
     "enabled": true
   },
-  "https_only": true
+  "bucket_policy": {
+    "Version": "2012-10-17",
+    "Statement": [
+      {
+        "Sid": "DenyInsecureTransport",
+        "Effect": "Deny",
+        "Principal": "*",
+        "Action": "s3:*",
+        "Resource": [
+          "arn:aws:s3:::demo-secure-bucket",
+          "arn:aws:s3:::demo-secure-bucket/*"
+        ],
+        "Condition": {
+          "Bool": {
+            "aws:SecureTransport": "false"
+          }
+        }
+      }
+    ]
+  }
 }
